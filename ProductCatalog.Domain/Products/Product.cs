@@ -38,17 +38,17 @@ namespace ProductCatalog.Domain.Products
         public string IsActive { get; set; }
 
 
-        [Column("created_on",Order = 6)]
+        [Column("created_on_utc",Order = 6)]
         [Required]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOnUTC { get; set; }
 
-        [Column("modified_on",Order = 7)]
+        [Column("modified_on_utc",Order = 7)]
         [Required]
-        public DateTime ModifiedOn { get; set; }
+        public DateTime ModifiedOnUTC { get; set; }
 
-        [Column("deleted_on", Order = 8)]
+        [Column("deleted_on_utc", Order = 8)]
         [Required]
-        public DateTime DeletedOn { get; set; }
+        public DateTime DeletedOnUTC { get; set; }
 
         [Column("created_by",Order = 9)]
         [Required]
@@ -61,7 +61,7 @@ namespace ProductCatalog.Domain.Products
         //navigation 
         public virtual ICollection<Image> Images { get; set; }
 
-        public int MasterId { get; set; }
-        public virtual Master Master { get; set; }
+        public int LookUpId { get; set; }
+        public virtual LookUp LookUp { get; set; }
     }
 }

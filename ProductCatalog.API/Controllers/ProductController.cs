@@ -14,7 +14,7 @@ namespace ProductCatalog.API.Controllers
     public class ProductController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Product> Get()
+        public IEnumerable<productModel> Get()
         {
             ProductModel pr = new ProductModel();
             return pr.findAll();

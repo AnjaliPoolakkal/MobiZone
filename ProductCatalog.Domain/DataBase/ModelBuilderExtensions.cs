@@ -15,101 +15,101 @@ namespace ProductCatalog.Domain.DataBase
         /// <param name="modelBuilder"></param>
         public static void Seed(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Products.Master>().HasData(
-                new Products.Master
+            modelBuilder.Entity<Products.LookUp>().HasData(
+                new Products.LookUp
                 {
                     Id = 1,
                     name = "ProductType",
                     Description = "NULL",
 
-                    ParentId = Products.MasterId.ProductType
+                    ParentId = Products.LookUpId.ProductType
                 }
                 );
-            modelBuilder.Entity<Products.Master>().HasData(
-                new Products.Master
+            modelBuilder.Entity<Products.LookUp>().HasData(
+                new Products.LookUp
                 {
                     Id = 2,
                     name = "ProductBrand",
                     Description = "NULL",
 
-                    ParentId = Products.MasterId.ProductType
+                    ParentId = Products.LookUpId.ProductBrand
                 }
                 );
 
-            modelBuilder.Entity<Products.Master>().HasData(
-                new Products.Master
+            modelBuilder.Entity<Products.LookUp>().HasData(
+                new Products.LookUp
                 {
                     Id = 3,
                     name = "Color",
                     Description = "NULL",
 
-                    ParentId = Products.MasterId.ProductType
+                    ParentId = Products.LookUpId.Color
                 }
                 );
 
-            modelBuilder.Entity<Products.Master>().HasData(
-                new Products.Master
+            modelBuilder.Entity<Products.LookUp>().HasData(
+                new Products.LookUp
                 {
                     Id = 4,
                     name = "Storage",
                     Description = "NULL",
 
-                    ParentId = Products.MasterId.ProductType
+                    ParentId = Products.LookUpId.Storage
                 }
                 );
 
-            modelBuilder.Entity<Products.Master>().HasData(
-                new Products.Master
+            modelBuilder.Entity<Products.LookUp>().HasData(
+                new Products.LookUp
                 {
                     Id = 5,
                     name = "SimType",
                     Description = "NULL",
 
-                    ParentId = Products.MasterId.ProductType
+                    ParentId = Products.LookUpId.SimType
                 }
                 );
 
-            modelBuilder.Entity<Products.Master>().HasData(
-                new Products.Master
+            modelBuilder.Entity<Products.LookUp>().HasData(
+                new Products.LookUp
                 {
                     Id = 6,
                     name = "OperatingSystem",
                     Description = "NULL",
 
-                    ParentId = Products.MasterId.ProductType
+                    ParentId = Products.LookUpId.OperatingSystem
                 }
                 );
 
-            modelBuilder.Entity<Products.Master>().HasData(
-                new Products.Master
+            modelBuilder.Entity<Products.LookUp>().HasData(
+                new Products.LookUp
                 {
                     Id = 7,
                     name = "ProcessorType",
                     Description = "NULL",
 
-                    ParentId = Products.MasterId.ProductType
+                    ParentId = Products.LookUpId.ProcessorType
                 }
                 );
 
-            modelBuilder.Entity<Products.Master>().HasData(
-               new Products.Master
+            modelBuilder.Entity<Products.LookUp>().HasData(
+               new Products.LookUp
                {
                    Id = 8,
                    name = "ProcessorCore",
                    Description = "NULL",
 
-                   ParentId = Products.MasterId.ProductType
+                   ParentId = Products.LookUpId.ProcessorCore
                }
                );
 
-            modelBuilder.Entity<Products.Master>().HasData(
-               new Products.Master
+            modelBuilder.Entity<Products.LookUp>().HasData(
+               new Products.LookUp
                {
                    Id = 9,
                    name = "PrimaryCamera",
                    Description = "NULL",
 
-                   ParentId = Products.MasterId.ProductType
+                   ParentId = Products.LookUpId.PrimaryCamera
                }
                );
         }

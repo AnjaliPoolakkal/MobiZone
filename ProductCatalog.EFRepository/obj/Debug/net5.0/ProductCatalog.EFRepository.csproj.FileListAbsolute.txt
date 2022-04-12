@@ -13,3 +13,8 @@ C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.EFRepository\obj\Debug
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.EFRepository\obj\Debug\net5.0\ref\ProductCatalog.EFRepository.dll
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.EFRepository\obj\Debug\net5.0\ProductCatalog.EFRepository.pdb
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.EFRepository\obj\Debug\net5.0\ProductCatalog.EFRepository.genruntimeconfig.cache
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.EFRepository\bin\Debug\net5.0\ProductCatalog.Domain.dll
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.EFRepository\bin\Debug\net5.0\ProductCatalog.Repository.dll
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.EFRepository\bin\Debug\net5.0\ProductCatalog.Repository.pdb
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.EFRepository\bin\Debug\net5.0\ProductCatalog.Domain.pdb
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.EFRepository\obj\Debug\net5.0\ProductCatalog.EFRepository.csproj.CopyComplete

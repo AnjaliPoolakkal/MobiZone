@@ -33,13 +33,13 @@ namespace ProductCatalog.Domain.Customers
         public int UserLocationId { get; set; }
         public virtual UserLocation UserLocation { get; set; }
 
-        [Column("created_on", Order = 5)]
+        [Column("created_on_utc", Order = 5)]
         [Required]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOnUTC { get; set; }
 
-        [Column("modified_on", Order = 6)]
+        [Column("modified_on_utc", Order = 6)]
         [Required]
-        public DateTime ModifiedOn { get; set; }
+        public DateTime ModifiedOnUTC { get; set; }
 
         [Column("created_by", Order = 7)]
         [Required]

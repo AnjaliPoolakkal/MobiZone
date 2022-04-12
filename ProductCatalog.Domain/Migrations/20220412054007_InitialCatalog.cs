@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ProductCatalog.Domain.Migrations
 {
-    public partial class Initialcatalog : Migration
+    public partial class InitialCatalog : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Master",
+                name: "LookUp",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
@@ -16,14 +16,14 @@ namespace ProductCatalog.Domain.Migrations
                     name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     parent_id = table.Column<int>(type: "int", nullable: false),
-                    created_on = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_on = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Master", x => x.id);
+                    table.PrimaryKey("PK_LookUp", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -42,8 +42,8 @@ namespace ProductCatalog.Domain.Migrations
                     resolution_type = table.Column<string>(type: "Varchar(100)", nullable: true),
                     display_type = table.Column<string>(type: "Varchar(100)", nullable: true),
                     other_features = table.Column<string>(type: "Varchar(500)", nullable: true),
-                    created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_at = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_at_ust = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_at_ust = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -64,8 +64,8 @@ namespace ProductCatalog.Domain.Migrations
                     last_name = table.Column<string>(type: "Varchar(50)", nullable: false),
                     email = table.Column<string>(type: "Varchar(100)", nullable: false),
                     contact = table.Column<long>(type: "bigInt", nullable: false),
-                    created_on = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_on = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     modified_by = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -83,8 +83,8 @@ namespace ProductCatalog.Domain.Migrations
                     city = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     postal_code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     country = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    created_on = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_on = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -104,20 +104,20 @@ namespace ProductCatalog.Domain.Migrations
                     price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     available_stock = table.Column<int>(type: "int", nullable: false),
                     is_active = table.Column<string>(type: "Varchar(50)", nullable: false),
-                    created_on = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_on = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    deleted_on = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    deleted_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    MasterId = table.Column<int>(type: "int", nullable: false)
+                    LookUpId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Products_Master_MasterId",
-                        column: x => x.MasterId,
-                        principalTable: "Master",
+                        name: "FK_Products_LookUp_LookUpId",
+                        column: x => x.LookUpId,
+                        principalTable: "LookUp",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -134,11 +134,11 @@ namespace ProductCatalog.Domain.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    master_id = table.Column<int>(type: "int", nullable: false),
+                    look_up_id = table.Column<int>(type: "int", nullable: false),
                     user_id = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
-                    created_on = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_on = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -146,9 +146,9 @@ namespace ProductCatalog.Domain.Migrations
                 {
                     table.PrimaryKey("PK_CartItem", x => x.id);
                     table.ForeignKey(
-                        name: "FK_CartItem_Master_master_id",
-                        column: x => x.master_id,
-                        principalTable: "Master",
+                        name: "FK_CartItem_LookUp_look_up_id",
+                        column: x => x.look_up_id,
+                        principalTable: "LookUp",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -167,8 +167,8 @@ namespace ProductCatalog.Domain.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     roles = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     user_id = table.Column<int>(type: "int", nullable: false),
-                    created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_at = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_at_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_at_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -193,8 +193,8 @@ namespace ProductCatalog.Domain.Migrations
                     address_line = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     contact = table.Column<int>(type: "int", nullable: false),
                     user_location_id = table.Column<int>(type: "int", nullable: false),
-                    created_on = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_on = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -223,8 +223,8 @@ namespace ProductCatalog.Domain.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     image_url = table.Column<string>(type: "Varchar(300)", nullable: true),
                     ProductId = table.Column<int>(type: "int", nullable: false),
-                    created_on = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_on = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -248,8 +248,8 @@ namespace ProductCatalog.Domain.Migrations
                     order_id = table.Column<int>(type: "int", nullable: false),
                     CatalogOrderid = table.Column<int>(type: "int", nullable: true),
                     order_status = table.Column<int>(type: "int", nullable: false),
-                    created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_at = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_at_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_at_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     modified_by = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -268,8 +268,8 @@ namespace ProductCatalog.Domain.Migrations
                     payment_status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     order_id = table.Column<int>(type: "int", nullable: false),
                     CatalogOrderid = table.Column<int>(type: "int", nullable: true),
-                    created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_at = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_at_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_at_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -288,8 +288,8 @@ namespace ProductCatalog.Domain.Migrations
                     totalamount = table.Column<int>(type: "int", nullable: false),
                     payment_id = table.Column<int>(type: "int", nullable: false),
                     PaymentDetailsId = table.Column<int>(type: "int", nullable: true),
-                    created_at = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_at = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_at_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_at_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -318,12 +318,12 @@ namespace ProductCatalog.Domain.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     product_id = table.Column<int>(type: "int", nullable: false),
                     ProductId = table.Column<int>(type: "int", nullable: true),
-                    master_id = table.Column<int>(type: "int", nullable: false),
+                    look_up_id = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
                     price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     order_details_id = table.Column<int>(type: "int", nullable: false),
-                    created_on = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    modified_on = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    created_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    modified_on_utc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     created_by = table.Column<DateTime>(type: "datetime2", nullable: false),
                     modified_by = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -331,9 +331,9 @@ namespace ProductCatalog.Domain.Migrations
                 {
                     table.PrimaryKey("PK_CatalogOrder", x => x.id);
                     table.ForeignKey(
-                        name: "FK_CatalogOrder_Master_master_id",
-                        column: x => x.master_id,
-                        principalTable: "Master",
+                        name: "FK_CatalogOrder_LookUp_look_up_id",
+                        column: x => x.look_up_id,
+                        principalTable: "LookUp",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -351,25 +351,25 @@ namespace ProductCatalog.Domain.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Master",
-                columns: new[] { "id", "created_by", "created_on", "description", "modified_by", "modified_on", "parent_id", "name" },
+                table: "LookUp",
+                columns: new[] { "id", "created_by", "created_on_utc", "description", "modified_by", "modified_on_utc", "parent_id", "name" },
                 values: new object[,]
                 {
                     { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "ProductType" },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "ProductBrand" },
-                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Color" },
-                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Storage" },
-                    { 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "SimType" },
-                    { 6, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "OperatingSystem" },
-                    { 7, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "ProcessorType" },
-                    { 8, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "ProcessorCore" },
-                    { 9, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "PrimaryCamera" }
+                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "ProductBrand" },
+                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, "Color" },
+                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 4, "Storage" },
+                    { 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 5, "SimType" },
+                    { 6, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 6, "OperatingSystem" },
+                    { 7, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 7, "ProcessorType" },
+                    { 8, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 8, "ProcessorCore" },
+                    { 9, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "NULL", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 9, "PrimaryCamera" }
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CartItem_master_id",
+                name: "IX_CartItem_look_up_id",
                 table: "CartItem",
-                column: "master_id");
+                column: "look_up_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CartItem_user_id",
@@ -377,9 +377,9 @@ namespace ProductCatalog.Domain.Migrations
                 column: "user_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CatalogOrder_master_id",
+                name: "IX_CatalogOrder_look_up_id",
                 table: "CatalogOrder",
-                column: "master_id");
+                column: "look_up_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CatalogOrder_order_details_id",
@@ -417,9 +417,9 @@ namespace ProductCatalog.Domain.Migrations
                 column: "CatalogOrderid");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_MasterId",
+                name: "IX_Products_LookUpId",
                 table: "Products",
-                column: "MasterId");
+                column: "LookUpId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_specification_id",
@@ -461,11 +461,11 @@ namespace ProductCatalog.Domain.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_CatalogOrder_Master_master_id",
+                name: "FK_CatalogOrder_LookUp_look_up_id",
                 table: "CatalogOrder");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Products_Master_MasterId",
+                name: "FK_Products_LookUp_LookUpId",
                 table: "Products");
 
             migrationBuilder.DropForeignKey(
@@ -495,7 +495,7 @@ namespace ProductCatalog.Domain.Migrations
                 name: "UserLocation");
 
             migrationBuilder.DropTable(
-                name: "Master");
+                name: "LookUp");
 
             migrationBuilder.DropTable(
                 name: "User");

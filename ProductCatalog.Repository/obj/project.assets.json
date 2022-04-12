@@ -1593,6 +1593,23 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ProductCatalog.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "Swashbuckle.AspNetCore": "5.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProductCatalog.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProductCatalog.Domain.dll": {}
+        }
       }
     }
   },
@@ -5962,6 +5979,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ProductCatalog.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProductCatalog.Domain/ProductCatalog.Domain.csproj",
+      "msbuildProject": "../ProductCatalog.Domain/ProductCatalog.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5971,6 +5993,7 @@
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
+      "ProductCatalog.Domain >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.0.0",
       "Swashbuckle.AspNetCore.Swagger >= 5.0.0"
     ]
@@ -6006,7 +6029,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Domain\\ProductCatalog.Domain.csproj": {
+              "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Domain\\ProductCatalog.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

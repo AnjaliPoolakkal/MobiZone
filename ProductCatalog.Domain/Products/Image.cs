@@ -23,11 +23,11 @@ namespace ProductCatalog.Domain.Products
         public int ProductId { get; set; }
         public Product Product { get; set; }
 
-        [Column("created_on", Order = 3)]
-        public DateTime CreatedOn { get; set; }
+        [Column("created_on_utc", Order = 3)]
+        public DateTime CreatedOnUTC { get; set; }
 
-        [Column("modified_on", Order = 4)]
-        public DateTime ModifiedOn { get; set; }
+        [Column("modified_on_utc", Order = 4)]
+        public DateTime ModifiedOnUTC { get; set; }
 
         [Column("created_by", Order = 5)]
         public DateTime CreatedBy { get; set; }

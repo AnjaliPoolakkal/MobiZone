@@ -286,3 +286,10 @@ C:\Users\apoolakkal\source\Example\mobzone\WebApp\obj\Debug\net5.0\WebApp.dll
 C:\Users\apoolakkal\source\Example\mobzone\WebApp\obj\Debug\net5.0\ref\WebApp.dll
 C:\Users\apoolakkal\source\Example\mobzone\WebApp\obj\Debug\net5.0\WebApp.pdb
 C:\Users\apoolakkal\source\Example\mobzone\WebApp\obj\Debug\net5.0\WebApp.genruntimeconfig.cache
+C:\Users\apoolakkal\source\Example\mobzone\WebApp\bin\Debug\net5.0\messages.json
+C:\Users\apoolakkal\source\Example\mobzone\WebApp\bin\Debug\net5.0\ProductCatalog.BusinessObject.dll
+C:\Users\apoolakkal\source\Example\mobzone\WebApp\bin\Debug\net5.0\ProductCatalog.EFRepository.dll
+C:\Users\apoolakkal\source\Example\mobzone\WebApp\bin\Debug\net5.0\ProductCatalog.Repository.dll
+C:\Users\apoolakkal\source\Example\mobzone\WebApp\bin\Debug\net5.0\ProductCatalog.BusinessObject.pdb
+C:\Users\apoolakkal\source\Example\mobzone\WebApp\bin\Debug\net5.0\ProductCatalog.EFRepository.pdb
+C:\Users\apoolakkal\source\Example\mobzone\WebApp\bin\Debug\net5.0\ProductCatalog.Repository.pdb

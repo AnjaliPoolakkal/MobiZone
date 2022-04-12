@@ -32,6 +32,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.BusinessObject\\ProductCatalog.BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.BusinessObject\\ProductCatalog.BusinessObject.csproj"
+              },
               "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Domain\\ProductCatalog.Domain.csproj": {
                 "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Domain\\ProductCatalog.Domain.csproj"
               }
@@ -109,6 +112,114 @@
         }
       }
     },
+    "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.BusinessObject\\ProductCatalog.BusinessObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.BusinessObject\\ProductCatalog.BusinessObject.csproj",
+        "projectName": "ProductCatalog.BusinessObject",
+        "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.BusinessObject\\ProductCatalog.BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\apoolakkal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.BusinessObject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\apoolakkal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Domain\\ProductCatalog.Domain.csproj": {
+                "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Domain\\ProductCatalog.Domain.csproj"
+              },
+              "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.EFRepository\\ProductCatalog.EFRepository.csproj": {
+                "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.EFRepository\\ProductCatalog.EFRepository.csproj"
+              },
+              "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Repository\\ProductCatalog.Repository.csproj": {
+                "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Repository\\ProductCatalog.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Domain\\ProductCatalog.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -137,6 +248,210 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.EFRepository\\ProductCatalog.EFRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.EFRepository\\ProductCatalog.EFRepository.csproj",
+        "projectName": "ProductCatalog.EFRepository",
+        "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.EFRepository\\ProductCatalog.EFRepository.csproj",
+        "packagesPath": "C:\\Users\\apoolakkal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.EFRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\apoolakkal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Repository\\ProductCatalog.Repository.csproj": {
+                "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Repository\\ProductCatalog.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Repository\\ProductCatalog.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Repository\\ProductCatalog.Repository.csproj",
+        "projectName": "ProductCatalog.Repository",
+        "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Repository\\ProductCatalog.Repository.csproj",
+        "packagesPath": "C:\\Users\\apoolakkal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\apoolakkal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Domain\\ProductCatalog.Domain.csproj": {
+                "projectPath": "C:\\Users\\apoolakkal\\source\\Example\\mobzone\\ProductCatalog.Domain\\ProductCatalog.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

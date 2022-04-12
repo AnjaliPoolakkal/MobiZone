@@ -2722,6 +2722,7 @@
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ProductCatalog.BusinessObject": "1.0.0",
           "ProductCatalog.Domain": "1.0.0",
           "Swashbuckle.AspNetCore": "5.0.0",
           "Swashbuckle.AspNetCore.Swagger": "5.0.0"
@@ -2735,6 +2736,26 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "ProductCatalog.BusinessObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ProductCatalog.Domain": "1.0.0",
+          "ProductCatalog.EFRepository": "1.0.0",
+          "ProductCatalog.Repository": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProductCatalog.BusinessObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProductCatalog.BusinessObject.dll": {}
+        }
       },
       "ProductCatalog.Domain/1.0.0": {
         "type": "project",
@@ -2751,6 +2772,42 @@
         },
         "runtime": {
           "bin/placeholder/ProductCatalog.Domain.dll": {}
+        }
+      },
+      "ProductCatalog.EFRepository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ProductCatalog.Repository": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProductCatalog.EFRepository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProductCatalog.EFRepository.dll": {}
+        }
+      },
+      "ProductCatalog.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ProductCatalog.Domain": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProductCatalog.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProductCatalog.Repository.dll": {}
         }
       }
     }
@@ -8989,10 +9046,25 @@
       "path": "../ProductCatalog.API/ProductCatalog.API.csproj",
       "msbuildProject": "../ProductCatalog.API/ProductCatalog.API.csproj"
     },
+    "ProductCatalog.BusinessObject/1.0.0": {
+      "type": "project",
+      "path": "../ProductCatalog.BusinessObject/ProductCatalog.BusinessObject.csproj",
+      "msbuildProject": "../ProductCatalog.BusinessObject/ProductCatalog.BusinessObject.csproj"
+    },
     "ProductCatalog.Domain/1.0.0": {
       "type": "project",
       "path": "../ProductCatalog.Domain/ProductCatalog.Domain.csproj",
       "msbuildProject": "../ProductCatalog.Domain/ProductCatalog.Domain.csproj"
+    },
+    "ProductCatalog.EFRepository/1.0.0": {
+      "type": "project",
+      "path": "../ProductCatalog.EFRepository/ProductCatalog.EFRepository.csproj",
+      "msbuildProject": "../ProductCatalog.EFRepository/ProductCatalog.EFRepository.csproj"
+    },
+    "ProductCatalog.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ProductCatalog.Repository/ProductCatalog.Repository.csproj",
+      "msbuildProject": "../ProductCatalog.Repository/ProductCatalog.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {

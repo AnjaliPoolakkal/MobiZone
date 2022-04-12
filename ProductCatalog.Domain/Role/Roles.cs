@@ -24,11 +24,11 @@ namespace ProductCatalog.Domain.Role
         public int UserId { get; set; }
         public virtual Customers.User User { get; set; }
 
-        [Column("created_at", Order = 3)]
-        public DateTime CreatedAt { get; set; }
+        [Column("created_at_utc", Order = 3)]
+        public DateTime CreatedAtUTC { get; set; }
 
-        [Column("modified_at", Order = 4)]
-        public DateTime ModifiedAt { get; set; }
+        [Column("modified_at_utc", Order = 4)]
+        public DateTime ModifiedAtUTC { get; set; }
 
         [Column("created_by", Order = 5)]
         public DateTime CreatedBy { get; set; }

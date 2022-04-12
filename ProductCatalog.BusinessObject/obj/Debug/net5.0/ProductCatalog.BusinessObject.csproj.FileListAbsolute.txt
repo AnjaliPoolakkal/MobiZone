@@ -25,3 +25,10 @@ C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\obj\Deb
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\obj\Debug\net5.0\ref\ProductCatalog.BusinessObject.dll
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\obj\Debug\net5.0\ProductCatalog.BusinessObject.pdb
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\obj\Debug\net5.0\ProductCatalog.BusinessObject.genruntimeconfig.cache
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\bin\Debug\net5.0\ProductCatalog.Domain.dll
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\bin\Debug\net5.0\ProductCatalog.EFRepository.dll
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\bin\Debug\net5.0\ProductCatalog.Repository.dll
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\bin\Debug\net5.0\ProductCatalog.Domain.pdb
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\bin\Debug\net5.0\ProductCatalog.EFRepository.pdb
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\bin\Debug\net5.0\ProductCatalog.Repository.pdb
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.BusinessObject\obj\Debug\net5.0\ProductCatalog.BusinessObject.csproj.CopyComplete

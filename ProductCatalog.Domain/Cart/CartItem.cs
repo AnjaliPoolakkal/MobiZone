@@ -13,12 +13,12 @@ namespace ProductCatalog.Domain.Cart
         [Key]
         [Column("id", Order = 0)]
         [Required]
-        public int id { get; set; }
+        public int Id { get; set; }
 
-        [Column("master_id", Order = 1)]
+        [Column("look_up_id", Order = 1)]
         [Required]
-        public int MasterId { get; set; }
-        public virtual Products.Master Master { get; set; }
+        public int LookUpId { get; set; }
+        public virtual Products.LookUp LookUp { get; set; }
 
         [Column("user_id", Order = 2)]
         [Required]
@@ -29,11 +29,11 @@ namespace ProductCatalog.Domain.Cart
         [Required]
         public int Quantity { get; set; }
 
-        [Column("created_on", Order = 4)]
-        public DateTime CreatedOn { get; set; }
+        [Column("created_on_utc", Order = 4)]
+        public DateTime CreatedOnUTC { get; set; }
 
-        [Column("modified_on", Order = 5)]
-        public DateTime ModifiedOn { get; set; }
+        [Column("modified_on_utc", Order = 5)]
+        public DateTime ModifiedOnUTC { get; set; }
 
         [Column("created_by", Order = 6)]
         public DateTime CreatedBy { get; set; }

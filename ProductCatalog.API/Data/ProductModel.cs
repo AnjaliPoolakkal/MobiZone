@@ -12,40 +12,40 @@ namespace ProductCatalog.API.ViewModel
         //sucess ghh
 
 
-        public List<Product> _products { get; set; }
-        public List<Product> findAll()
+        public List<productModel> _products { get; set; }
+        public List<productModel> findAll()
         {
-            _products = new List<Product>
+            _products = new List<productModel>
             {
-                new Product()
+                new productModel()
                 {
                     Id ="1",
                     Name="SAMSUNG",
                     price =20000
 
                 },
-                new Product()
+                new productModel()
                 {
                     Id ="2",
                     Name="NOKIA",
                     price =25000
 
                 },
-                 new Product()
+                 new productModel()
                 {
                     Id ="3",
                     Name="SONY",
                     price =25000
 
                 },
-                  new Product()
+                  new productModel()
                 {
                     Id ="4",
                     Name="REDMI",
                     price =25000
 
                 },
-                   new Product()
+                   new productModel()
                 {
                     Id ="5",
                     Name="Realme",

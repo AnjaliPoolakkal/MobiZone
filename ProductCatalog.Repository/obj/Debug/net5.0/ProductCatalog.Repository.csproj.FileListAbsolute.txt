@@ -13,3 +13,6 @@ C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.Repository\obj\Debug\n
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.Repository\obj\Debug\net5.0\ref\ProductCatalog.Repository.dll
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.Repository\obj\Debug\net5.0\ProductCatalog.Repository.pdb
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.Repository\obj\Debug\net5.0\ProductCatalog.Repository.genruntimeconfig.cache
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.Repository\bin\Debug\net5.0\ProductCatalog.Domain.dll
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.Repository\bin\Debug\net5.0\ProductCatalog.Domain.pdb
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.Repository\obj\Debug\net5.0\ProductCatalog.Repository.csproj.CopyComplete

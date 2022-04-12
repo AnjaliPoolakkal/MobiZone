@@ -38,6 +38,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.0",
+          "ProductCatalog.BusinessObject": "1.0.0",
           "ProductCatalog.Domain": "1.0.0",
           "Swashbuckle.AspNetCore": "5.0.0",
           "Swashbuckle.AspNetCore.Swagger": "5.0.0",
@@ -1360,6 +1361,24 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "ProductCatalog.BusinessObject/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ProductCatalog.Domain": "1.0.0",
+          "ProductCatalog.EFRepository": "1.0.0",
+          "ProductCatalog.Repository": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0"
+        },
+        "runtime": {
+          "ProductCatalog.BusinessObject.dll": {}
+        },
+        "compile": {
+          "ProductCatalog.BusinessObject.dll": {}
+        }
+      },
       "ProductCatalog.Domain/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.0",
@@ -1373,6 +1392,38 @@
         },
         "compile": {
           "ProductCatalog.Domain.dll": {}
+        }
+      },
+      "ProductCatalog.EFRepository/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ProductCatalog.Repository": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0"
+        },
+        "runtime": {
+          "ProductCatalog.EFRepository.dll": {}
+        },
+        "compile": {
+          "ProductCatalog.EFRepository.dll": {}
+        }
+      },
+      "ProductCatalog.Repository/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ProductCatalog.Domain": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0"
+        },
+        "runtime": {
+          "ProductCatalog.Repository.dll": {}
+        },
+        "compile": {
+          "ProductCatalog.Repository.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3802,7 +3853,22 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
+    "ProductCatalog.BusinessObject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "ProductCatalog.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductCatalog.EFRepository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductCatalog.Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

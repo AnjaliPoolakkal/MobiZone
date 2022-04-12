@@ -29,11 +29,11 @@ namespace ProductCatalog.Domain.Order
         public int OrderId { get; set; }
         public virtual CatalogOrder CatalogOrder { get; set; }
 
-        [Column("created_at", Order = 4)]
-        public DateTime CreatedAt { get; set; }
+        [Column("created_at_utc", Order = 4)]
+        public DateTime CreatedAtUTC { get; set; }
 
-        [Column("modified_at", Order = 5)]
-        public DateTime ModifiedAt { get; set; }
+        [Column("modified_at_utc", Order = 5)]
+        public DateTime ModifiedAtUTC { get; set; }
 
         [Column("created_by", Order = 6)]
         public DateTime CreatedBy { get; set; }

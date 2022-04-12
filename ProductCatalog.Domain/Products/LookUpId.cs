@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductCatalog.Domain.Products
 {
-    public enum MasterId
+    public enum LookUpId
     {
         ProductType = 1,
         ProductBrand = 2,

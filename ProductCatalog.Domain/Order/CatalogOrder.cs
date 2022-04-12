@@ -20,10 +20,10 @@ namespace ProductCatalog.Domain.Order
         public int product_id { get; set; }
         public virtual Products.Product Product { get; set; }
 
-        [Column("master_id", Order = 2)]
+        [Column("look_up_id", Order = 2)]
         [Required]
-        public int MasterId { get; set; }
-        public virtual Products.Master Master { get; set; }
+        public int LookUpId { get; set; }
+        public virtual Products.LookUp LookUp { get; set; }
 
         [Column("quantity", Order = 3)]
         [Required]
@@ -37,13 +37,13 @@ namespace ProductCatalog.Domain.Order
         public int OrderDetailsId { get; set; }
         public virtual OrderDetails OrderDetails { get; set; }
 
-        [Column("created_on", Order = 6)]
+        [Column("created_on_utc", Order = 6)]
         [Required]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOnUTC { get; set; }
 
-        [Column("modified_on", Order = 7)]
+        [Column("modified_on_utc", Order = 7)]
         [Required]
-        public DateTime ModifiedOn { get; set; }
+        public DateTime ModifiedOnUTC { get; set; }
 
         [Column("created_by", Order = 8)]
         [Required]

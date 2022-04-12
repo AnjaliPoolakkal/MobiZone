@@ -39,13 +39,13 @@ namespace ProductCatalog.Domain.Customers
         [Required]
         public long Contact { get; set; }
 
-        [Column("created_on", Order = 7)]
+        [Column("created_on_utc", Order = 7)]
         [Required]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOnUTC { get; set; }
 
-        [Column("modified_on", Order = 8)]
+        [Column("modified_on_utc", Order = 8)]
         [Required]
-        public DateTime ModifiedOn { get; set; }
+        public DateTime ModifiedOnUTC { get; set; }
 
         [Column("created_by", Order = 9)]
         [Required]
@@ -56,7 +56,7 @@ namespace ProductCatalog.Domain.Customers
         public string ModifiedBy { get; set; }
 
         //navigatation 
-        public virtual ICollection<UserAddress> userAddresses { get; set; }
+        public virtual ICollection<UserAddress> UserAddresses { get; set; }
         public virtual ICollection<Cart.CartItem> CartItems { get; set; }
         public virtual ICollection<Order.OrderDetails> OrderDetails { get; set; }
     }

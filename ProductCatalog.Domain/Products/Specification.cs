@@ -44,11 +44,11 @@ namespace ProductCatalog.Domain.Products
         [Column("other_features", Order = 10, TypeName = "Varchar(500)")]
         public string OtherFeatures { get; set; }
 
-        [Column("created_at", Order = 11)]
-        public DateTime CreatedAt { get; set; }
+        [Column("created_at_ust", Order = 11)]
+        public DateTime CreatedAtUST { get; set; }
 
-        [Column("modified_at", Order = 12)]
-        public DateTime ModifiedAt { get; set; }
+        [Column("modified_at_ust", Order = 12)]
+        public DateTime ModifiedAtUST { get; set; }
 
         [Column("created_by", Order = 13)]
         public DateTime CreatedBy { get; set; }

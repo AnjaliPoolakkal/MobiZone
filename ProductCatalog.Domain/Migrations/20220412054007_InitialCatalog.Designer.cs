@@ -9,9 +9,9 @@ using ProductCatalog.Domain.DataBase;
 
 namespace ProductCatalog.Domain.Migrations
 {
-    [DbContext(typeof(CatalogDbContext))]
-    [Migration("20220405064550_Initialcatalog")]
-    partial class Initialcatalog
+    [DbContext(typeof(CatalogDBContext))]
+    [Migration("20220412054007_InitialCatalog")]
+    partial class InitialCatalog
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace ProductCatalog.Domain.Migrations
 
             modelBuilder.Entity("ProductCatalog.Domain.Cart.CartItem", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("id")
@@ -33,21 +33,21 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime>("CreatedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_on");
+                        .HasColumnName("created_on_utc");
 
-                    b.Property<int>("MasterId")
+                    b.Property<int>("LookUpId")
                         .HasColumnType("int")
-                        .HasColumnName("master_id");
+                        .HasColumnName("look_up_id");
 
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
                         .HasColumnName("modified_by");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("ModifiedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_on");
+                        .HasColumnName("modified_on_utc");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int")
@@ -57,9 +57,9 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("int")
                         .HasColumnName("user_id");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.HasIndex("MasterId");
+                    b.HasIndex("LookUpId");
 
                     b.HasIndex("UserId");
 
@@ -83,9 +83,9 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime>("CreatedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_on");
+                        .HasColumnName("created_on_utc");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -107,9 +107,9 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("modified_by");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("ModifiedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_on");
+                        .HasColumnName("modified_on_utc");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -147,17 +147,17 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime>("CreatedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_on");
+                        .HasColumnName("created_on_utc");
 
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
                         .HasColumnName("modified_by");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("ModifiedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_on");
+                        .HasColumnName("modified_on_utc");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int")
@@ -198,17 +198,17 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime>("CreatedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_on");
+                        .HasColumnName("created_on_utc");
 
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
                         .HasColumnName("modified_by");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("ModifiedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_on");
+                        .HasColumnName("modified_on_utc");
 
                     b.Property<string>("PostalCode")
                         .IsRequired()
@@ -232,21 +232,21 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime>("CreatedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_on");
+                        .HasColumnName("created_on_utc");
 
-                    b.Property<int>("MasterId")
+                    b.Property<int>("LookUpId")
                         .HasColumnType("int")
-                        .HasColumnName("master_id");
+                        .HasColumnName("look_up_id");
 
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
                         .HasColumnName("modified_by");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("ModifiedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_on");
+                        .HasColumnName("modified_on_utc");
 
                     b.Property<int>("OrderDetailsId")
                         .HasColumnType("int")
@@ -269,7 +269,7 @@ namespace ProductCatalog.Domain.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("MasterId");
+                    b.HasIndex("LookUpId");
 
                     b.HasIndex("OrderDetailsId");
 
@@ -286,17 +286,17 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnName("id")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("CreatedAtUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_at");
+                        .HasColumnName("created_at_utc");
 
                     b.Property<DateTime>("CreatedBy")
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAtUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_at");
+                        .HasColumnName("modified_at_utc");
 
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
@@ -337,17 +337,17 @@ namespace ProductCatalog.Domain.Migrations
                     b.Property<int?>("CatalogOrderid")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("CreatedAtUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_at");
+                        .HasColumnName("created_at_utc");
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAtUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_at");
+                        .HasColumnName("modified_at_utc");
 
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)")
@@ -383,17 +383,17 @@ namespace ProductCatalog.Domain.Migrations
                     b.Property<int?>("CatalogOrderid")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("CreatedAtUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_at");
+                        .HasColumnName("created_at_utc");
 
                     b.Property<DateTime>("CreatedBy")
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAtUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_at");
+                        .HasColumnName("modified_at_utc");
 
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
@@ -427,9 +427,9 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime>("CreatedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_on");
+                        .HasColumnName("created_on_utc");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("Varchar(300)")
@@ -439,9 +439,9 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("modified_by");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("ModifiedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_on");
+                        .HasColumnName("modified_on_utc");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int")
@@ -454,7 +454,7 @@ namespace ProductCatalog.Domain.Migrations
                     b.ToTable("Images");
                 });
 
-            modelBuilder.Entity("ProductCatalog.Domain.Products.Master", b =>
+            modelBuilder.Entity("ProductCatalog.Domain.Products.LookUp", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -466,9 +466,9 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime>("CreatedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_on");
+                        .HasColumnName("created_on_utc");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)")
@@ -478,9 +478,9 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("modified_by");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("ModifiedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_on");
+                        .HasColumnName("modified_on_utc");
 
                     b.Property<int>("ParentId")
                         .HasColumnType("int")
@@ -492,17 +492,17 @@ namespace ProductCatalog.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Master");
+                    b.ToTable("LookUp");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 1,
                             name = "ProductType"
                         },
@@ -510,88 +510,88 @@ namespace ProductCatalog.Domain.Migrations
                         {
                             Id = 2,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ParentId = 1,
+                            ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParentId = 2,
                             name = "ProductBrand"
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ParentId = 1,
+                            ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParentId = 3,
                             name = "Color"
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ParentId = 1,
+                            ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParentId = 4,
                             name = "Storage"
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ParentId = 1,
+                            ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParentId = 5,
                             name = "SimType"
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ParentId = 1,
+                            ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParentId = 6,
                             name = "OperatingSystem"
                         },
                         new
                         {
                             Id = 7,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ParentId = 1,
+                            ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParentId = 7,
                             name = "ProcessorType"
                         },
                         new
                         {
                             Id = 8,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ParentId = 1,
+                            ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParentId = 8,
                             name = "ProcessorCore"
                         },
                         new
                         {
                             Id = 9,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ModifiedOn = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ParentId = 1,
+                            ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ParentId = 9,
                             name = "PrimaryCamera"
                         });
                 });
@@ -612,29 +612,29 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime>("CreatedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_on");
+                        .HasColumnName("created_on_utc");
 
-                    b.Property<DateTime>("DeletedOn")
+                    b.Property<DateTime>("DeletedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("deleted_on");
+                        .HasColumnName("deleted_on_utc");
 
                     b.Property<string>("IsActive")
                         .IsRequired()
                         .HasColumnType("Varchar(50)")
                         .HasColumnName("is_active");
 
-                    b.Property<int>("MasterId")
+                    b.Property<int>("LookUpId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
                         .HasColumnName("modified_by");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime>("ModifiedOnUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_on");
+                        .HasColumnName("modified_on_utc");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -651,7 +651,7 @@ namespace ProductCatalog.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MasterId");
+                    b.HasIndex("LookUpId");
 
                     b.HasIndex("SpecificationId");
 
@@ -666,9 +666,9 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnName("id")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("CreatedAtUST")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_at");
+                        .HasColumnName("created_at_ust");
 
                     b.Property<DateTime>("CreatedBy")
                         .HasColumnType("datetime2")
@@ -686,9 +686,9 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("Varchar(100)")
                         .HasColumnName("hybrid_slot");
 
-                    b.Property<DateTime>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAtUST")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_at");
+                        .HasColumnName("modified_at_ust");
 
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
@@ -735,17 +735,17 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnName("id")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("CreatedAtUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("created_at");
+                        .HasColumnName("created_at_utc");
 
                     b.Property<DateTime>("CreatedBy")
                         .HasColumnType("datetime2")
                         .HasColumnName("created_by");
 
-                    b.Property<DateTime>("ModifiedAt")
+                    b.Property<DateTime>("ModifiedAtUTC")
                         .HasColumnType("datetime2")
-                        .HasColumnName("modified_at");
+                        .HasColumnName("modified_at_utc");
 
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
@@ -769,9 +769,9 @@ namespace ProductCatalog.Domain.Migrations
 
             modelBuilder.Entity("ProductCatalog.Domain.Cart.CartItem", b =>
                 {
-                    b.HasOne("ProductCatalog.Domain.Products.Master", "Master")
+                    b.HasOne("ProductCatalog.Domain.Products.LookUp", "LookUp")
                         .WithMany()
-                        .HasForeignKey("MasterId")
+                        .HasForeignKey("LookUpId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -781,7 +781,7 @@ namespace ProductCatalog.Domain.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Master");
+                    b.Navigation("LookUp");
 
                     b.Navigation("User");
                 });
@@ -789,7 +789,7 @@ namespace ProductCatalog.Domain.Migrations
             modelBuilder.Entity("ProductCatalog.Domain.Customers.UserAddress", b =>
                 {
                     b.HasOne("ProductCatalog.Domain.Customers.User", "User")
-                        .WithMany("userAddresses")
+                        .WithMany("UserAddresses")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -807,9 +807,9 @@ namespace ProductCatalog.Domain.Migrations
 
             modelBuilder.Entity("ProductCatalog.Domain.Order.CatalogOrder", b =>
                 {
-                    b.HasOne("ProductCatalog.Domain.Products.Master", "Master")
+                    b.HasOne("ProductCatalog.Domain.Products.LookUp", "LookUp")
                         .WithMany()
-                        .HasForeignKey("MasterId")
+                        .HasForeignKey("LookUpId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -823,7 +823,7 @@ namespace ProductCatalog.Domain.Migrations
                         .WithMany()
                         .HasForeignKey("ProductId");
 
-                    b.Navigation("Master");
+                    b.Navigation("LookUp");
 
                     b.Navigation("OrderDetails");
 
@@ -878,9 +878,9 @@ namespace ProductCatalog.Domain.Migrations
 
             modelBuilder.Entity("ProductCatalog.Domain.Products.Product", b =>
                 {
-                    b.HasOne("ProductCatalog.Domain.Products.Master", "Master")
+                    b.HasOne("ProductCatalog.Domain.Products.LookUp", "LookUp")
                         .WithMany()
-                        .HasForeignKey("MasterId")
+                        .HasForeignKey("LookUpId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -890,7 +890,7 @@ namespace ProductCatalog.Domain.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Master");
+                    b.Navigation("LookUp");
 
                     b.Navigation("Specification");
                 });
@@ -912,7 +912,7 @@ namespace ProductCatalog.Domain.Migrations
 
                     b.Navigation("OrderDetails");
 
-                    b.Navigation("userAddresses");
+                    b.Navigation("UserAddresses");
                 });
 
             modelBuilder.Entity("ProductCatalog.Domain.Products.Product", b =>

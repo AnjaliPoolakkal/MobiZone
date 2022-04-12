@@ -86,3 +86,10 @@ C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\obj\Debug\net5.0\P
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\obj\Debug\net5.0\ref\ProductCatalog.API.dll
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\obj\Debug\net5.0\ProductCatalog.API.pdb
 C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\obj\Debug\net5.0\ProductCatalog.API.genruntimeconfig.cache
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\bin\Debug\net5.0\messages.json
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\bin\Debug\net5.0\ProductCatalog.BusinessObject.dll
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\bin\Debug\net5.0\ProductCatalog.EFRepository.dll
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\bin\Debug\net5.0\ProductCatalog.Repository.dll
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\bin\Debug\net5.0\ProductCatalog.BusinessObject.pdb
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\bin\Debug\net5.0\ProductCatalog.EFRepository.pdb
+C:\Users\apoolakkal\source\Example\mobzone\ProductCatalog.API\bin\Debug\net5.0\ProductCatalog.Repository.pdb

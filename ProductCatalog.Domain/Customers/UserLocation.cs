@@ -27,13 +27,13 @@ namespace ProductCatalog.Domain.Customers
         [Required]
         public string Country { get; set; }
 
-        [Column("created_on", Order = 4)]
+        [Column("created_on_utc", Order = 4)]
         [Required]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOnUTC { get; set; }
 
-        [Column("modified_on", Order = 5)]
+        [Column("modified_on_utc", Order = 5)]
         [Required]
-        public DateTime ModifiedOn { get; set; }
+        public DateTime ModifiedOnUTC { get; set; }
 
         [Column("created_by", Order = 6)]
         [Required]

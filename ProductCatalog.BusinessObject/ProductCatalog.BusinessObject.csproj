@@ -20,4 +20,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProductCatalog.Domain\ProductCatalog.Domain.csproj" />
+    <ProjectReference Include="..\ProductCatalog.EFRepository\ProductCatalog.EFRepository.csproj" />
+    <ProjectReference Include="..\ProductCatalog.Repository\ProductCatalog.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
