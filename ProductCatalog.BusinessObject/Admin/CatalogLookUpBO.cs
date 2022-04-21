@@ -43,5 +43,7 @@ namespace ProductCatalog.BusinessObject
         {
             return await catalogLookUpRepository.GetAll();
         }
+
+       
     }
 }

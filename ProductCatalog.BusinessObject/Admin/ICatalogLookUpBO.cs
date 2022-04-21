@@ -10,5 +10,6 @@ namespace ProductCatalog.BusinessObject
     {
         Task<LookUp> Add(LookUp item);
         Task<IEnumerable<LookUp>> GetLookUpItems();
+       
     }
 }
