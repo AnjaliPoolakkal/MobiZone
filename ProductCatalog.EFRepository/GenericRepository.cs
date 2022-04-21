@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProductCatalog.EFRepository
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericService<T> where T : class
     {
         private readonly DbContext context;
         DbSet<T> dbSet;

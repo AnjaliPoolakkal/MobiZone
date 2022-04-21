@@ -19,8 +19,23 @@ namespace ProductCatalog.BusinessObject
         
         public async Task<LookUp> Add(LookUp item)
         {
-            
-            return await catalogLookUpRepository.Add(item);
+            try
+            {
+                if (item.name == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return await catalogLookUpRepository.Add(item);
+                    
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
             
         }
 

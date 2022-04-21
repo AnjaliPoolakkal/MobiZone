@@ -13,7 +13,7 @@ namespace ProductCatalog.Domain.Order
         [Key]
         [Column("id", Order = 0)]
         [Required]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Column("product_id", Order = 1)]
         [Required]

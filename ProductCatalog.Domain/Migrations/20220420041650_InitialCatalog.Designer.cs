@@ -10,7 +10,7 @@ using ProductCatalog.Domain.DataBase;
 namespace ProductCatalog.Domain.Migrations
 {
     [DbContext(typeof(CatalogDBContext))]
-    [Migration("20220412054007_InitialCatalog")]
+    [Migration("20220420041650_InitialCatalog")]
     partial class InitialCatalog
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -222,7 +222,7 @@ namespace ProductCatalog.Domain.Migrations
 
             modelBuilder.Entity("ProductCatalog.Domain.Order.CatalogOrder", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("id")
@@ -267,7 +267,7 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("int")
                         .HasColumnName("product_id");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.HasIndex("LookUpId");
 
@@ -334,7 +334,7 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnName("id")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("CatalogOrderid")
+                    b.Property<int?>("CatalogOrderId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAtUTC")
@@ -363,7 +363,7 @@ namespace ProductCatalog.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CatalogOrderid");
+                    b.HasIndex("CatalogOrderId");
 
                     b.ToTable("OrderStatus");
                 });
@@ -380,7 +380,7 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("int")
                         .HasColumnName("amount");
 
-                    b.Property<int?>("CatalogOrderid")
+                    b.Property<int?>("CatalogOrderId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAtUTC")
@@ -410,7 +410,7 @@ namespace ProductCatalog.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CatalogOrderid");
+                    b.HasIndex("CatalogOrderId");
 
                     b.ToTable("PaymentDetails");
                 });
@@ -470,10 +470,6 @@ namespace ProductCatalog.Domain.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("created_on_utc");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("description");
-
                     b.Property<DateTime>("ModifiedBy")
                         .HasColumnType("datetime2")
                         .HasColumnName("modified_by");
@@ -500,7 +496,6 @@ namespace ProductCatalog.Domain.Migrations
                             Id = 1,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 1,
@@ -511,7 +506,6 @@ namespace ProductCatalog.Domain.Migrations
                             Id = 2,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 2,
@@ -522,7 +516,6 @@ namespace ProductCatalog.Domain.Migrations
                             Id = 3,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 3,
@@ -533,7 +526,6 @@ namespace ProductCatalog.Domain.Migrations
                             Id = 4,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 4,
@@ -544,7 +536,6 @@ namespace ProductCatalog.Domain.Migrations
                             Id = 5,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 5,
@@ -555,7 +546,6 @@ namespace ProductCatalog.Domain.Migrations
                             Id = 6,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 6,
@@ -566,7 +556,6 @@ namespace ProductCatalog.Domain.Migrations
                             Id = 7,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 7,
@@ -577,7 +566,6 @@ namespace ProductCatalog.Domain.Migrations
                             Id = 8,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 8,
@@ -588,7 +576,6 @@ namespace ProductCatalog.Domain.Migrations
                             Id = 9,
                             CreatedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "NULL",
                             ModifiedBy = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ModifiedOnUTC = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ParentId = 9,
@@ -851,7 +838,7 @@ namespace ProductCatalog.Domain.Migrations
                 {
                     b.HasOne("ProductCatalog.Domain.Order.CatalogOrder", "CatalogOrder")
                         .WithMany()
-                        .HasForeignKey("CatalogOrderid");
+                        .HasForeignKey("CatalogOrderId");
 
                     b.Navigation("CatalogOrder");
                 });
@@ -860,7 +847,7 @@ namespace ProductCatalog.Domain.Migrations
                 {
                     b.HasOne("ProductCatalog.Domain.Order.CatalogOrder", "CatalogOrder")
                         .WithMany()
-                        .HasForeignKey("CatalogOrderid");
+                        .HasForeignKey("CatalogOrderId");
 
                     b.Navigation("CatalogOrder");
                 });

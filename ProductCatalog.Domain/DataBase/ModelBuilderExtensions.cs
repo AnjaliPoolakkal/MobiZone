@@ -20,7 +20,7 @@ namespace ProductCatalog.Domain.DataBase
                 {
                     Id = 1,
                     name = "ProductType",
-                    Description = "NULL",
+                    
 
                     ParentId = Products.LookUpId.ProductType
                 }
@@ -30,7 +30,7 @@ namespace ProductCatalog.Domain.DataBase
                 {
                     Id = 2,
                     name = "ProductBrand",
-                    Description = "NULL",
+                    
 
                     ParentId = Products.LookUpId.ProductBrand
                 }
@@ -41,7 +41,7 @@ namespace ProductCatalog.Domain.DataBase
                 {
                     Id = 3,
                     name = "Color",
-                    Description = "NULL",
+                    
 
                     ParentId = Products.LookUpId.Color
                 }
@@ -52,7 +52,7 @@ namespace ProductCatalog.Domain.DataBase
                 {
                     Id = 4,
                     name = "Storage",
-                    Description = "NULL",
+                    
 
                     ParentId = Products.LookUpId.Storage
                 }
@@ -63,7 +63,7 @@ namespace ProductCatalog.Domain.DataBase
                 {
                     Id = 5,
                     name = "SimType",
-                    Description = "NULL",
+                    
 
                     ParentId = Products.LookUpId.SimType
                 }
@@ -74,7 +74,7 @@ namespace ProductCatalog.Domain.DataBase
                 {
                     Id = 6,
                     name = "OperatingSystem",
-                    Description = "NULL",
+                    
 
                     ParentId = Products.LookUpId.OperatingSystem
                 }
@@ -85,7 +85,7 @@ namespace ProductCatalog.Domain.DataBase
                 {
                     Id = 7,
                     name = "ProcessorType",
-                    Description = "NULL",
+                    
 
                     ParentId = Products.LookUpId.ProcessorType
                 }
@@ -96,7 +96,7 @@ namespace ProductCatalog.Domain.DataBase
                {
                    Id = 8,
                    name = "ProcessorCore",
-                   Description = "NULL",
+                   
 
                    ParentId = Products.LookUpId.ProcessorCore
                }
@@ -107,7 +107,7 @@ namespace ProductCatalog.Domain.DataBase
                {
                    Id = 9,
                    name = "PrimaryCamera",
-                   Description = "NULL",
+                   
 
                    ParentId = Products.LookUpId.PrimaryCamera
                }

@@ -17,8 +17,8 @@ namespace ProductCatalog.Domain.Products
         [Column("name", Order = 1)]
         public string name { get; set; }
 
-        [Column("description", Order = 2)]
-        public string Description { get; set; }
+        //[Column("description", Order = 2)]
+        //public string Description { get; set; }
 
         [Column("parent_id", Order = 3)]
         public LookUpId ParentId { get; set; }
@@ -36,6 +36,11 @@ namespace ProductCatalog.Domain.Products
         public DateTime ModifiedBy { get; set; }
 
         public void Add(LookUp lookUp)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static implicit operator bool(LookUp v)
         {
             throw new NotImplementedException();
         }

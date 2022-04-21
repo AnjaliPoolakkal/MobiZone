@@ -11,17 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UILayer", "UILayer", "{91B9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductCatalog", "ProductCatalog", "{BBA7199B-D533-4365-96B6-DADDAFE1B283}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.BusinessObject", "ProductCatalog.BusinessObject\ProductCatalog.BusinessObject.csproj", "{CEDCA939-CE57-4C84-A5C5-5719CCDFDFA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalog.BusinessObject", "ProductCatalog.BusinessObject\ProductCatalog.BusinessObject.csproj", "{CEDCA939-CE57-4C84-A5C5-5719CCDFDFA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.Domain", "ProductCatalog.Domain\ProductCatalog.Domain.csproj", "{DB601847-7514-4845-813E-8823ACD314E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalog.Domain", "ProductCatalog.Domain\ProductCatalog.Domain.csproj", "{DB601847-7514-4845-813E-8823ACD314E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.EFRepository", "ProductCatalog.EFRepository\ProductCatalog.EFRepository.csproj", "{D7A9728F-A07F-4E45-ABC8-265208FA4423}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalog.EFRepository", "ProductCatalog.EFRepository\ProductCatalog.EFRepository.csproj", "{D7A9728F-A07F-4E45-ABC8-265208FA4423}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.Repository", "ProductCatalog.Repository\ProductCatalog.Repository.csproj", "{B85B158E-A890-4518-8306-F716AE9F1969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalog.Repository", "ProductCatalog.Repository\ProductCatalog.Repository.csproj", "{B85B158E-A890-4518-8306-F716AE9F1969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.API", "ProductCatalog.API\ProductCatalog.API.csproj", "{9DB40AC5-1F6E-4B8D-86C3-86DF976BFBA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalog.API", "ProductCatalog.API\ProductCatalog.API.csproj", "{9DB40AC5-1F6E-4B8D-86C3-86DF976BFBA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{D07FCCA8-3427-4423-B0B3-B64A301F48B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{D07FCCA8-3427-4423-B0B3-B64A301F48B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{17287F9B-3413-4D09-B4E2-D95453DD58E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,7 @@ Global
 		{B85B158E-A890-4518-8306-F716AE9F1969} = {BBA7199B-D533-4365-96B6-DADDAFE1B283}
 		{9DB40AC5-1F6E-4B8D-86C3-86DF976BFBA5} = {CD82E694-1EC9-4160-A622-D167FA5731EB}
 		{D07FCCA8-3427-4423-B0B3-B64A301F48B2} = {91B9CF67-FCD2-42F5-8F66-E85F64AB14AD}
+		{17287F9B-3413-4D09-B4E2-D95453DD58E8} = {BBA7199B-D533-4365-96B6-DADDAFE1B283}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AA35723-82CF-4D19-83B5-5D4EA78C1ED6}
