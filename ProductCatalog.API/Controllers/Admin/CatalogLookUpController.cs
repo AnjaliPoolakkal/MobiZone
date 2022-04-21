@@ -24,9 +24,10 @@ namespace ProductCatalog.API.Controllers
         {
             return Ok(await catalogLookUpBO.GetLookUpItems());
         }
+
+
         [HttpPost]
-        public async Task<ActionResult<LookUp>> 
-            post(LookUp lookUp)
+        public async Task<ActionResult<LookUp>> post(LookUp lookUp)
         {
             
                 var item = await catalogLookUpBO.Add(lookUp);
